@@ -14,7 +14,7 @@
 <br>
 
 <div align="center">
-  <h1>🐍 Viper AI — Modern Open Source AI Web</h1>
+  <h1> Viper AI — Modern Open Source AI Web</h1>
   <p><strong>AI berbasis web modern, cepat, dan open source — ditenagai oleh Gemini</strong></p>
   <br>
   <a href="https://viper-ai1.vercel.app" target="_blank">
