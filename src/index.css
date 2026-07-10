@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-gemini-blue: #4285f4;
+  --color-gemini-purple: #9b72cb;
+  --color-gemini-red: #d96570;
+}
+
+@layer base {
+  body {
+    @apply bg-[#131314] text-[#e3e3e3] font-sans;
+  }
+}
+
+@layer utilities {
+  .gemini-gradient-text {
+    background: linear-gradient(74deg, #4285f4 0, #9b72cb 9%, #d96570 20%, #d96570 24%, #9b72cb 35%, #4285f4 44%, #9b72cb 50%, #d96570 56%, #131314 75%, #131314 100%);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gemini-gradient-bg {
+    background: linear-gradient(74deg, #4285f4 0, #9b72cb 30%, #d96570 60%);
+  }
+
+  .markdown-content {
+    @apply text-gray-200 leading-relaxed;
+  }
+
+  .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+    @apply font-bold mt-6 mb-4 text-white;
+  }
+
+  .markdown-content h1 { @apply text-2xl; }
+  .markdown-content h2 { @apply text-xl; }
+  .markdown-content h3 { @apply text-lg; }
+
+  .markdown-content p {
+    @apply mb-4;
+  }
+
+  .markdown-content ul, .markdown-content ol {
+    @apply mb-4 ml-6;
+  }
+
+  .markdown-content ul {
+    @apply list-disc;
+  }
+
+  .markdown-content ol {
+    @apply list-decimal;
+  }
+
+  .markdown-content li {
+    @apply mb-1;
+  }
+
+  .markdown-content table {
+    @apply w-full border-collapse mb-4 overflow-x-auto block;
+  }
+
+  .markdown-content th, .markdown-content td {
+    @apply border border-[#2d2e2f] p-3 text-left;
+  }
+
+  .markdown-content th {
+    @apply bg-[#1e1f20] font-bold;
+  }
+
+  .markdown-content blockquote {
+    @apply border-l-4 border-blue-500 pl-4 italic my-4 text-gray-400;
+  }
+
+  .markdown-content a {
+    @apply text-blue-400 hover:text-blue-300 underline transition-colors;
+  }
+
+  .markdown-content code:not(pre code) {
+    @apply bg-[#2d2e2f] px-1.5 py-0.5 rounded text-blue-300 font-mono text-sm;
+  }
+
+  .markdown-content pre {
+    @apply my-4 rounded-xl overflow-hidden border border-[#2d2e2f];
+  }
+  .rgb-outline {
+    animation: rgb-outline 2s linear infinite;
+  }
+
+  @keyframes gradientAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes rgb-outline {
+    0% { border-color: #ff0000; }
+    16% { border-color: #ffff00; }
+    33% { border-color: #00ff00; }
+    50% { border-color: #00ffff; }
+    66% { border-color: #0000ff; }
+    83% { border-color: #ff00ff; }
+    100% { border-color: #ff0000; }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3c3c3c;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a;
+}

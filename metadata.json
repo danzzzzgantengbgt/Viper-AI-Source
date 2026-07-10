@@ -1,0 +1,7 @@
+{
+  "name": "Old Version ",
+  "description": "Create your own personalized AI assistant with media support, voice input, and custom personalities.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
